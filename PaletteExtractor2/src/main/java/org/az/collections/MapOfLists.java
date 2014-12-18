@@ -20,18 +20,16 @@ public class MapOfLists<X, T> {
     private final Map<X, List<T>> map = new HashMap<X, List<T>>();
 
     final Comparator<Entry<X, List<T>>> comparatorAsc = new Comparator<Entry<X, List<T>>>() {
-
         @Override
         public int compare(final Entry<X, List<T>> e1, final Entry<X, List<T>> e2) {
-            return e1.getValue().size() < e2.getValue().size() ? -1 : 1;
+            return e1.getValue().size() - e2.getValue().size();
         }
     };
 
     final Comparator<Entry<X, List<T>>> comparatorDesc = new Comparator<Entry<X, List<T>>>() {
-
         @Override
         public int compare(final Entry<X, List<T>> e1, final Entry<X, List<T>> e2) {
-            return e1.getValue().size() > e2.getValue().size() ? -1 : 1;
+            return e2.getValue().size() - e1.getValue().size();
         }
     };
 
