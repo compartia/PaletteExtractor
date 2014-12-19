@@ -1,2 +1,6 @@
 
 *.prefs
+
+PaletteExtractor2/.settings/org.eclipse.wst.common.project.facet.core.xml
+
+PaletteExtractor2/Palette.html
